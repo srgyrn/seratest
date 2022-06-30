@@ -1,0 +1,16 @@
+---
+name: Tests
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  main:
+    uses: ./.github/workflows/test-helper.yml
+    with:
+      path:
+      can_continue: true
+  service:
+    uses: ./.github/workflows/test-helper.yml
+    with:
+      path: ./service/...
+      can_continue: true
