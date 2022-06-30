@@ -12,7 +12,7 @@ func TestIsDuck(t *testing.T) {
 
 	t.Run("duck", func(t *testing.T) {
 		got := IsDuck("duck")
-		if got != "that is indeed a duck" {
+		if got != "that is indeed a duck!" {
 			t.Error("expected something else here")
 		}
 	})
