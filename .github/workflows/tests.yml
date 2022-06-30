@@ -12,5 +12,5 @@ jobs:
   service:
     uses: ./.github/workflows/test-helper.yml
     with:
-      path: ./service/...
+      path: ./services/...
       can_continue: true
