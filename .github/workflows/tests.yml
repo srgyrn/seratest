@@ -4,10 +4,10 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  main:
+  greeter:
     uses: ./.github/workflows/test-helper.yml
     with:
-      path:
+      path: ./greeter/...
       can_continue: true
   service:
     uses: ./.github/workflows/test-helper.yml
