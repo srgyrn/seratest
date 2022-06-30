@@ -8,7 +8,7 @@ jobs:
     uses: ./.github/workflows/test-helper.yml
     with:
       task: test-greeter
-      can_continue: true
+      can_continue: false
   service:
     uses: ./.github/workflows/test-helper.yml
     with:
