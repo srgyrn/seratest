@@ -3,8 +3,8 @@ name: Tests Helper
 on:
   workflow_call:
     inputs:
-      path:
-        description: test path
+      task:
+        description: task name
         required: true
         type: string
       can_continue:
@@ -21,5 +21,6 @@ jobs:
           go-version: 1.18
       - uses: actions/checkout@v2
       - name: Run tests
-        run: go test -v -race ${{ inputs.path }}
+        run: |
+          make ${{ inputs.task }}
     continue-on-error: ${{ inputs.can_continue }}

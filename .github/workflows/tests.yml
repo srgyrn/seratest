@@ -7,10 +7,10 @@ jobs:
   greeter:
     uses: ./.github/workflows/test-helper.yml
     with:
-      path: ./greeter/...
+      task: test-greeter
       can_continue: true
   service:
     uses: ./.github/workflows/test-helper.yml
     with:
-      path: ./services/...
+      task: test-services
       can_continue: true
